@@ -1,0 +1,8 @@
+.calendar {
+    width: 325px;
+}
+
+.weekdays-header{
+    display: flex;
+    justify-content: space-evenly;
+}
