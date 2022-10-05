@@ -3,6 +3,7 @@ import React from 'react';
 const Navigation = (props) => { 
     
     const onClickBackHandler = () => {
+        
         let monthAfterClick;
         let yearAfterClick;
         if (props.month - 1 < 0) {
@@ -12,11 +13,17 @@ const Navigation = (props) => {
             monthAfterClick = props.month - 1,
             yearAfterClick = props.year;
         }
+
+        let currentMonth = yearAfterClick + "-" + (monthAfterClick+1) + "-01";
+        if (new Date(currentMonth).setHours(0) < props.fromDate.setHours(0) ) {
+            return
+        } 
         
         props.onClickBack(monthAfterClick, yearAfterClick)
     }
 
     const onClickForwardHandler = () => {
+        
         let monthAfterClick;
         let yearAfterClick;
         if (props.month + 1 > 11) {
@@ -27,6 +34,11 @@ const Navigation = (props) => {
             yearAfterClick = props.year;
         }
         
+        let currentMonth = yearAfterClick + "-" + (monthAfterClick+1) + "-01";
+        if (new Date(currentMonth).setHours(0) > props.tillDate.setHours(0) ) {
+            return
+        } 
+
         props.onClickForward(monthAfterClick, yearAfterClick)
     }
     
