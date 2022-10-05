@@ -3,4 +3,4 @@ import {default as renderCalendar} from "./Calendar/CalendarOneMonth.js"
 
 export const render = renderComponent;
 
-renderCalendar("calendar", 1, 2022);
+renderCalendar("calendar", 9, 2022);

@@ -1,7 +1,6 @@
 import React from 'react';
 
 const Navigation = (props) => { 
-    console.log(props.month)
     
     const onClickBackHandler = () => {
         let monthAfterClick;

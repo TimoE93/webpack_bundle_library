@@ -25,9 +25,9 @@ const CalendarOneMonth = (props) => {
 
     return (
       <>
-      {month}/{year}
+      {month + 1}/{year}
       <Navigation onClickBack={onClickBackHandler} onClickForward={onClickForwardHandler} month={month} year={year}></Navigation>
-      <CalendarMonth month={props.month}></CalendarMonth>
+      <CalendarMonth month={month} year={year}></CalendarMonth>
       </>
   )
 };

@@ -4,5 +4,19 @@
 
 .weekdays-header{
     display: flex;
-    justify-content: space-evenly;
+    text-align: center;
+}
+
+.weekdays-days{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.day-header {
+    flex: 0 0 14.2857%;
+}
+
+.day {
+    flex: 0 0 14.2857%;
 }
